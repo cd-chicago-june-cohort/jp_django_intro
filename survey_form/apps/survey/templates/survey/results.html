@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'survey/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+    <div class="container" id="results_container">
+        <h1>Submitted info</h1>
+        <h2>Name:       {{ request.session.name }}</h2>
+        <h2>Location:       {{ request.session.location }}</h2>
+        <h2>Favorite language:       {{ request.session.language }}</h2>
+        <p>{{ request.session.comment }}</p>
+        <form action="/">
+            <input type="submit" name="go_back" value="Go Back">
+        </form>
+    </div>
+</body>
+</html>
