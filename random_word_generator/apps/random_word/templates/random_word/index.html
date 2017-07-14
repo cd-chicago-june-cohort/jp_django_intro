@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Random Word (attempt #{{ request.session.attempt_count }})</h1>
+    <h2>{{ rand_str }}</h2>
+    <hr>
+    <form action="/generate" method="get">
+        <input type="submit" name="submit" value="Generate">
+    </form>
+    <hr>
+    <form action="/reset" method="get">
+        <input type="submit" name="submit" value="Reset">
+    </form>
+</body>
+</html>
