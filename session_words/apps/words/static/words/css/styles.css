@@ -1,0 +1,37 @@
+* {
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+.container-fluid {
+    border: 1px solid black;
+}
+
+
+.divs {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+#add_word {
+    border-right: 5px solid black;
+}
+
+.red {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#choose {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.btn {
+    margin-top: 15px;
+}

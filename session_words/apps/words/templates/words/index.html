@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'words/css/styles.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="add_word" class="divs">
+            
+            <h1>Add a new word</h1>
+
+            <form action="/add" method="post">
+                {% csrf_token %}
+                <input type="text" name="new_word">
+                <br>
+                <p id="choose">Choose color</p>
+                <br>
+                <input type="radio" name="color" value="Red" id="red" class="red">
+                <label for="red" class="red">Red</label>
+                <br>
+                <input type="radio" name="color" value="Green" id="green">
+                <label for="green">Green</label>
+                <br>
+                <input type="radio" name="color" value="Blue" id="blue">
+                <label for="blue">Blue</label>
+                <br>
+                <input type="checkbox" name="big" value="big" id="big">
+                <label for="big">Show in big fonts!</label>
+                <br>
+                <input type="submit" class="btn" name="submit" value="Add to session">
+            </form>
+        </div>
+        <div id="list_words" class="divs">
+            <form action="/reset" method="get">
+                {% csrf_token %}
+                <input class="btn" type="submit" name="clear" value="Clear Session">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
