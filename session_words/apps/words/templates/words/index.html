@@ -21,13 +21,13 @@
                 <br>
                 <p id="choose">Choose color</p>
                 <br>
-                <input type="radio" name="color" value="Red" id="red" class="red">
-                <label for="red" class="red">Red</label>
+                <input type="radio" name="color" value="red" id="red_btn" class="red_btn">
+                <label for="red_btn" class="red_btn">Red</label>
                 <br>
-                <input type="radio" name="color" value="Green" id="green">
+                <input type="radio" name="color" value="green" id="green">
                 <label for="green">Green</label>
                 <br>
-                <input type="radio" name="color" value="Blue" id="blue">
+                <input type="radio" name="color" value="blue" id="blue">
                 <label for="blue">Blue</label>
                 <br>
                 <input type="checkbox" name="big" value="big" id="big">
@@ -41,6 +41,17 @@
                 {% csrf_token %}
                 <input class="btn" type="submit" name="clear" value="Clear Session">
             </form>
+
+            {% for diction in request.session.word_list %}
+
+                <p><span class="{{ diction.color}} {{ diction.size }}">{{ diction.name }}</span>  - added on {{diction.time}}</p>
+
+
+
+            {% endfor %}
+
+
+
         </div>
     </div>
 </body>

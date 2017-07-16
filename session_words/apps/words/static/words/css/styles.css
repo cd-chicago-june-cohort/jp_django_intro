@@ -20,7 +20,7 @@
     border-right: 5px solid black;
 }
 
-.red {
+#red_btn {
     padding-top: 0;
     margin-top: 0;
 }
@@ -34,4 +34,20 @@
 
 .btn {
     margin-top: 15px;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.big {
+    font-size: 40px;
 }
